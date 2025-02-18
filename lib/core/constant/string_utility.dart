@@ -6,6 +6,11 @@ const String basePath = "assets/Images";
 const String applogo = '$basePath/applogo.png';
 const String googleIcon = '$basePath/google.png';
 const String placeholder = '$basePath/placeholder.png';
+const String messages = '$basePath/messages.png';
+const String whatsapp = '$basePath/whatsapp.png';
+const String facebook = '$basePath/facebook.png';
+const String share = '$basePath/share.png';
+
 //Dummy URL
 const String dummyImageUrl = "https://picsum.photos/200";
 //String Name

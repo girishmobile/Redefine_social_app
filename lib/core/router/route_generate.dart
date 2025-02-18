@@ -4,6 +4,8 @@ import 'package:redefine_social_app/screens/Auth/ForgotPassword.dart';
 import 'package:redefine_social_app/screens/Auth/LoginScreen.dart';
 import 'package:redefine_social_app/screens/Auth/SingupScreen.dart';
 import 'package:redefine_social_app/screens/Facebook/LoginWithFacebook.dart';
+import 'package:redefine_social_app/screens/Friends/AddContacts.dart';
+import 'package:redefine_social_app/screens/Friends/AddFriendByPhoneNumber.dart';
 import 'package:redefine_social_app/screens/Friends/AddFriends.dart';
 import 'package:redefine_social_app/screens/Friends/FriendList.dart';
 import 'package:redefine_social_app/screens/Google/LoginWithGoogle.dart';
@@ -40,6 +42,11 @@ class RouteGenerated {
         return MaterialPageRoute(builder: (_) => const FriendList());
       case RouteName.addFriends:
         return MaterialPageRoute(builder: (_) => AddFriends());
+      case RouteName.addFriendByPhoneNumber:
+        return MaterialPageRoute(
+            builder: (_) => const AddFriendByPhoneNumber());
+      case RouteName.addContacts:
+        return MaterialPageRoute(builder: (_) => const AddContacts());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(

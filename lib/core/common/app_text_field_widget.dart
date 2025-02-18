@@ -75,7 +75,7 @@ class AppTextFieldWidget extends StatelessWidget {
 
   commonBorderView({Color? borderColor}) {
     return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(borderRadius ?? 0),
+      borderRadius: BorderRadius.circular(borderRadius ?? 4),
       borderSide: BorderSide(color: borderColor ?? Colors.grey),
     );
   }

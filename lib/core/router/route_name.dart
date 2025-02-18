@@ -11,4 +11,6 @@ class RouteName {
   static const String notifications = '/Notifications';
   static const String addFriends = '/AddFriends';
   static const String friendList = '/FriendList';
+  static const String addFriendByPhoneNumber = '/AddFriendByPhoneNumber';
+  static const String addContacts = '/AddContacts';
 }
