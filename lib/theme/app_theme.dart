@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:redefine_social_app/core/constant/string_utility.dart';
 
 final ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
@@ -9,7 +8,7 @@ final ThemeData lightTheme = ThemeData(
     surface: Colors.white,
     primary: Colors.black,
     onPrimary: Colors.white,
-    primaryContainer: const Color.fromARGB(255, 240, 236, 236),
+    primaryContainer: const Color.fromARGB(255, 251, 249, 247),
   ),
   dialogBackgroundColor: Colors.white,
   scaffoldBackgroundColor: Colors.white,
@@ -49,10 +48,8 @@ final ThemeData lightTheme = ThemeData(
         fontWeight: FontWeight.w600,
         color: Colors.white),
   ),
-  appBarTheme: AppBarTheme(
-    backgroundColor: Colors.black,
-    foregroundColor: Colors.white,
-  ),
+  appBarTheme:
+      AppBarTheme(backgroundColor: Colors.black, foregroundColor: Colors.white),
 );
 
 //Dark theme
@@ -63,7 +60,7 @@ final ThemeData darkTheme = ThemeData(
       surface: Colors.black,
       primary: Colors.white,
       onPrimary: Colors.black,
-      primaryContainer: const Color.fromARGB(255, 95, 88, 88),
+      primaryContainer: const Color.fromARGB(255, 251, 249, 247),
     ),
     dialogBackgroundColor: Colors.black,
     scaffoldBackgroundColor: Colors.black,
@@ -103,6 +100,3 @@ final ThemeData darkTheme = ThemeData(
       backgroundColor: Colors.white,
       foregroundColor: Colors.black,
     ));
-
-//**
-//dadj */

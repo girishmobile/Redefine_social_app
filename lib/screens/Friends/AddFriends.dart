@@ -14,6 +14,12 @@ class AddFriends extends StatefulWidget {
 }
 
 class _AddFriendsState extends State<AddFriends> {
+  // Static values to avoid recreating constants
+  static const double _dividerThickness = 0.5;
+  static const double _dividerHeight = 0.25;
+  static const double _iconSize = 24.0;
+  static const double _sizedBoxHeight = 30.0;
+
   @override
   Widget build(BuildContext context) {
     return AppScaffold(
@@ -28,9 +34,9 @@ class _AddFriendsState extends State<AddFriends> {
       ),
       body: ListView(
         shrinkWrap: true,
-        physics: ScrollPhysics(),
+        physics: const AlwaysScrollableScrollPhysics(),
         children: [
-          simpleTiles(
+          _simpleTiles(
             titleName: 'Add by Phone Number',
             onTap: () {
               Navigator.pushNamed(context, RouteName.addFriendByPhoneNumber);
@@ -38,28 +44,25 @@ class _AddFriendsState extends State<AddFriends> {
             icon: Icons.person_add_alt_1_rounded,
           ),
           Divider(
-            thickness: 0.5,
-            height: 0.25,
+            thickness: _dividerThickness,
+            height: _dividerHeight,
             color: Colors.grey,
             indent: 10,
             endIndent: 10,
           ),
-          simpleTiles(
+          _simpleTiles(
             titleName: 'Add from contacts',
             onTap: () {
               Navigator.pushNamed(context, RouteName.addContacts);
             },
             icon: Icons.contact_page,
           ),
-          SizedBox(
-            height: 30,
-          ),
+          const SizedBox(height: _sizedBoxHeight),
           Padding(
             padding: const EdgeInsets.all(containerPadding),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
-              spacing: 10,
               children: [
                 AppTextWidget(
                   text: 'Invite more friends',
@@ -84,16 +87,20 @@ class _AddFriendsState extends State<AddFriends> {
     );
   }
 
-  simpleTiles({String? titleName, IconData? icon, Function()? onTap}) {
+  Widget _simpleTiles({
+    required String titleName,
+    required Function() onTap,
+    IconData? icon,
+  }) {
     return ListTile(
       onTap: onTap,
       tileColor: Theme.of(context).colorScheme.primaryContainer,
       leading: Icon(
         icon ?? Icons.contact_page,
-        size: 24,
+        size: _iconSize,
       ),
       title: AppTextWidget(
-        text: titleName ?? 'Add from contacts',
+        text: titleName,
         style: Theme.of(context).textTheme.bodyMedium,
       ),
     );

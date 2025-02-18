@@ -11,8 +11,12 @@ class AddFriendByPhoneNumber extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Cache the screen width and theme for better performance
+    final screenWidth = MediaQuery.of(context).size.width;
+    final theme = Theme.of(context);
+
     return Scaffold(
-      appBar: AppAppbar(
+      appBar: const AppAppbar(
         titleName: 'Add friend by Phone Number',
       ),
       body: SafeArea(
@@ -20,37 +24,37 @@ class AddFriendByPhoneNumber extends StatelessWidget {
           children: [
             Expanded(
               child: ListView(
-                shrinkWrap: true,
-                physics: ScrollPhysics(),
-                padding: EdgeInsets.all(containerPadding),
+                // Remove unnecessary shrinkWrap as it's inside Expanded
+                physics: const ScrollPhysics(),
+                padding: const EdgeInsets.all(containerPadding),
                 children: [
                   AppTextWidget(
                     text: 'Add a friend',
-                    style: Theme.of(context).textTheme.headlineMedium,
+                    style: theme.textTheme.headlineMedium,
                   ),
-                  AppTextWidget(
+                  const AppTextWidget(
                     top: columSpacing,
                     bottom: columSpacing,
                     text:
                         'Please enter the name and phone number of the person you would like to add.',
                   ),
-                  AppTextFieldWidget(
+                  const AppTextFieldWidget(
                     hintText: 'Name',
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: columSpacing,
                   ),
-                  AppTextFieldWidget(
+                  const AppTextFieldWidget(
                     hintText: 'Phone number',
                   ),
                 ],
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: containerPadding),
+              padding: const EdgeInsets.symmetric(horizontal: containerPadding),
               child: AppButtonWidget(
                 text: 'ADD',
-                width: MediaQuery.of(context).size.width,
+                width: screenWidth,
                 onPressed: () {},
                 bottom: columSpacing,
                 buttonStyle: commonButtonStyle(context: context),

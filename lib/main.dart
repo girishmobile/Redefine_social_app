@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:redefine_social_app/core/router/route_generate.dart';
 import 'package:redefine_social_app/core/router/route_name.dart';
-import 'package:redefine_social_app/theme/Theme.dart';
+import 'package:redefine_social_app/theme/app_theme.dart';
 
 void main() {
   runApp(const MyApp());

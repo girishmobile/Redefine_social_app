@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:redefine_social_app/core/components/components.dart';
 
 class AppTextFieldWidget extends StatelessWidget {
   const AppTextFieldWidget({
@@ -70,13 +71,6 @@ class AppTextFieldWidget extends StatelessWidget {
           border: commonBorderView(),
         ),
       ),
-    );
-  }
-
-  commonBorderView({Color? borderColor}) {
-    return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(borderRadius ?? 4),
-      borderSide: BorderSide(color: borderColor ?? Colors.grey),
     );
   }
 }

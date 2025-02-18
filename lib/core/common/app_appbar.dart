@@ -15,7 +15,6 @@ class AppAppbar extends StatelessWidget implements PreferredSizeWidget {
     var size = MediaQuery.of(context).size;
     bool isPortrait =
         MediaQuery.of(context).orientation == Orientation.portrait;
-
     return AppBar(
       elevation: zero5,
       backgroundColor: Theme.of(context).colorScheme.surface,

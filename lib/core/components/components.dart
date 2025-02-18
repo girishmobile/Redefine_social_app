@@ -70,3 +70,10 @@ TextStyle commonTextStyle(
     fontFamily: fontTenorSans,
   );
 }
+
+commonBorderView({Color? borderColor, double? borderRadius}) {
+  return OutlineInputBorder(
+    borderRadius: BorderRadius.circular(borderRadius ?? 4),
+    borderSide: BorderSide(color: borderColor ?? Colors.grey),
+  );
+}
