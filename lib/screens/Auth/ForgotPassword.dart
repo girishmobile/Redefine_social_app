@@ -18,6 +18,7 @@ class ForgotPassword extends StatefulWidget {
 
 class _ForgotPasswordState extends State<ForgotPassword> {
   bool isEmailSelected = true;
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -42,14 +43,15 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   Widget _forgotPasswordView(
       {required Size size, required BuildContext context}) {
     return Form(
+      key: _formKey,
       child: Container(
         margin: const EdgeInsets.all(containerMargin),
         width: size.width,
-        padding: EdgeInsets.all(containerPadding),
+        padding: const EdgeInsets.all(containerPadding),
         child: Column(
           spacing: 16,
           children: [
-            Icon(Icons.lock, size: 100, color: Theme.of(context).primaryColor),
+            const Icon(Icons.lock, size: 100),
             AppTextWidget(
               text: troubleLoginText,
               style: Theme.of(context).textTheme.headlineMedium,
@@ -59,71 +61,27 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               style: Theme.of(context).textTheme.bodyMedium,
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 spacing: 8,
                 children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        child: InkWell(
-                          onTap: () {
-                            setState(() {
-                              isEmailSelected = true;
-                            });
-                          },
-                          child: AppTextWidget(
-                            text: emailText,
-                            textAlign: TextAlign.start,
-                            left: 5,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        child: InkWell(
-                          onTap: () {
-                            setState(() {
-                              isEmailSelected = false;
-                            });
-                          },
-                          child: AppTextWidget(
-                            text: phoneText,
-                            textAlign: TextAlign.end,
-                            right: 5,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Container(
-                          height: 8,
-                          color: isEmailSelected
-                              ? Theme.of(context).primaryColor
-                              : Colors.grey,
-                        ),
-                      ),
-                      Expanded(
-                        child: Container(
-                          height: 8,
-                          color: isEmailSelected
-                              ? Colors.grey
-                              : Theme.of(context).primaryColor,
-                        ),
-                      ),
-                    ],
-                  )
+                  _buildToggleRow(),
+                  _buildIndicatorRow(context),
                 ],
               ),
             ),
             AppTextFieldWidget(
               hintText: emailText,
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter ${isEmailSelected ? 'email' : 'phone'}';
+                }
+                return null;
+              },
             ),
             AppButtonWidget(
               text: sendloginText,
-              onPressed: () {},
+              onPressed: _handleSubmit,
               width: size.width,
               buttonStyle: commonButtonStyle(context: context),
               textStyle: Theme.of(context).textTheme.labelMedium,
@@ -172,5 +130,83 @@ class _ForgotPasswordState extends State<ForgotPassword> {
         ),
       ),
     );
+  }
+
+  Widget _buildToggleRow() {
+    return Row(
+      children: [
+        Expanded(
+          child: _buildToggleOption(
+            text: emailText,
+            isSelected: isEmailSelected,
+            onTap: () => _updateToggleSelection(true),
+            alignment: TextAlign.start,
+          ),
+        ),
+        Expanded(
+          child: _buildToggleOption(
+            text: phoneText,
+            isSelected: !isEmailSelected,
+            onTap: () => _updateToggleSelection(false),
+            alignment: TextAlign.end,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildToggleOption({
+    required String text,
+    required bool isSelected,
+    required VoidCallback onTap,
+    required TextAlign alignment,
+  }) {
+    return InkWell(
+      onTap: onTap,
+      child: AppTextWidget(
+        text: text,
+        textAlign: alignment,
+        left: alignment == TextAlign.start ? 5 : 0,
+        right: alignment == TextAlign.end ? 5 : 0,
+      ),
+    );
+  }
+
+  void _updateToggleSelection(bool value) {
+    if (isEmailSelected != value) {
+      setState(() {
+        isEmailSelected = value;
+      });
+    }
+  }
+
+  Widget _buildIndicatorRow(BuildContext context) {
+    return Container(
+      height: 2,
+      child: Row(
+        children: [
+          Expanded(
+            child: Container(
+              color: isEmailSelected
+                  ? Theme.of(context).colorScheme.primary
+                  : Colors.transparent,
+            ),
+          ),
+          Expanded(
+            child: Container(
+              color: !isEmailSelected
+                  ? Theme.of(context).colorScheme.primary
+                  : Colors.transparent,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _handleSubmit() {
+    if (_formKey.currentState?.validate() ?? false) {
+      // Handle form submission
+    }
   }
 }
