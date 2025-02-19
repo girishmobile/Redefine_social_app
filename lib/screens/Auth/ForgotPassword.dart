@@ -185,4 +185,28 @@ class _ForgotPasswordState extends State<ForgotPassword> {
       // Handle form submission
     }
   }
+
+  Widget _buildIndicatorRow(BuildContext context) {
+    return Container(
+      height: 2,
+      child: Row(
+        children: [
+          Expanded(
+            child: Container(
+              color: isEmailSelected
+                  ? Theme.of(context).colorScheme.primary
+                  : Colors.transparent,
+            ),
+          ),
+          Expanded(
+            child: Container(
+              color: !isEmailSelected
+                  ? Theme.of(context).colorScheme.primary
+                  : Colors.transparent,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }
