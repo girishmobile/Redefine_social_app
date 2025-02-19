@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:redefine_social_app/core/common/app_button_widget.dart';
 import 'package:redefine_social_app/core/common/app_text_widget.dart';
 import 'package:redefine_social_app/core/components/components.dart';
+import 'package:redefine_social_app/core/constant/num_constants.dart';
 import 'package:redefine_social_app/core/constant/string_utility.dart';
 import 'package:redefine_social_app/core/router/route_name.dart';
 
@@ -18,6 +19,7 @@ class FriendsScreen extends StatelessWidget {
       color: colorScheme.surface,
       child: Center(
         child: Column(
+          spacing: columSpacing,
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,

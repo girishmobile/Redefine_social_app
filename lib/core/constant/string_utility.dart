@@ -13,6 +13,7 @@ const String share = '$basePath/share.png';
 
 //Dummy URL
 const String dummyImageUrl = "https://picsum.photos/200";
+
 //String Name
 const String appName = 'Redefine Social';
 const String welcomeText = 'Welcome to Redefine';

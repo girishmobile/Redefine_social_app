@@ -23,10 +23,17 @@ final ThemeData lightTheme = ThemeData(
       color: Colors.black,
     ),
     bodyMedium: GoogleFonts.openSans(
-        fontSize: 14.0,
-        letterSpacing: 1.2,
-        fontWeight: FontWeight.w400,
-        color: Colors.black),
+      fontSize: 14.0,
+      letterSpacing: 1.2,
+      fontWeight: FontWeight.w400,
+      color: Colors.black,
+    ),
+    bodySmall: GoogleFonts.openSans(
+      fontSize: 14.0,
+      letterSpacing: 1.2,
+      fontWeight: FontWeight.w400,
+      color: Colors.grey,
+    ),
     headlineLarge: GoogleFonts.openSans(
         fontSize: 24.0,
         letterSpacing: 1.2,
@@ -71,10 +78,17 @@ final ThemeData darkTheme = ThemeData(
           fontWeight: FontWeight.w700,
           color: Colors.white),
       bodyMedium: GoogleFonts.openSans(
-          fontSize: 14.0,
-          letterSpacing: 1.2,
-          fontWeight: FontWeight.w400,
-          color: Colors.white),
+        fontSize: 14.0,
+        letterSpacing: 1.2,
+        fontWeight: FontWeight.w400,
+        color: Colors.white,
+      ),
+      bodySmall: GoogleFonts.openSans(
+        fontSize: 14.0,
+        letterSpacing: 1.2,
+        fontWeight: FontWeight.w400,
+        color: Colors.grey,
+      ),
       headlineLarge: GoogleFonts.openSans(
           fontSize: 24.0,
           letterSpacing: 1.2,
