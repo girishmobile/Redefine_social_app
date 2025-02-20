@@ -7,9 +7,9 @@ import 'package:redefine_social_app/core/constant/num_constants.dart';
 import 'package:redefine_social_app/core/constant/string_utility.dart';
 import 'package:redefine_social_app/core/router/route_name.dart';
 import 'package:redefine_social_app/core/utility/date_time_helper.dart';
-import 'package:redefine_social_app/screens/Home/AccountScreen.dart';
-import 'package:redefine_social_app/screens/Friends/FriendsScreen.dart';
-import 'package:redefine_social_app/screens/Home/HomeScreen.dart';
+import 'package:redefine_social_app/screens/Home/account_view.dart';
+import 'package:redefine_social_app/screens/Friends/friends_view.dart';
+import 'package:redefine_social_app/screens/Home/home_view.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -20,9 +20,9 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   int _selectedIndex = 1;
   final List<Widget> _pages = [
-    const FriendsScreen(),
-    const HomeScreen(),
-    const AccountScreen()
+    const FriendsView(),
+    const HomeView(),
+    const AccountView()
   ];
   @override
   @override
@@ -86,10 +86,13 @@ class _DashboardState extends State<Dashboard> {
             Container(
               padding: EdgeInsets.all(8),
               width: size.width,
-              color: Theme.of(context).colorScheme.primaryContainer,
+              color: Theme.of(context).colorScheme.primary,
               child: AppTextWidget(
                 text: fullDateTime,
-                style: Theme.of(context).textTheme.headlineSmall,
+                style: Theme.of(context)
+                    .textTheme
+                    .headlineSmall
+                    ?.copyWith(color: Colors.white),
               ),
             ),
             Expanded(

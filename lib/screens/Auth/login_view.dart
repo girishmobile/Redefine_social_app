@@ -1,28 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:redefine_social_app/core/common/app_button_widget.dart';
 import 'package:redefine_social_app/core/common/app_divider_widget.dart';
+import 'package:redefine_social_app/core/common/app_gradient_button.dart';
 import 'package:redefine_social_app/core/common/app_text_field_widget.dart';
 import 'package:redefine_social_app/core/common/app_text_widget.dart';
+import 'package:redefine_social_app/core/common/app_textfield_view.dart';
 import 'package:redefine_social_app/core/components/components.dart';
 import 'package:redefine_social_app/core/constant/num_constants.dart';
 import 'package:redefine_social_app/core/constant/string_utility.dart';
 import 'package:redefine_social_app/core/router/route_name.dart';
 
-class Loginscreen extends StatefulWidget {
-  const Loginscreen({super.key});
+class LoginView extends StatefulWidget {
+  const LoginView({super.key});
 
   @override
-  State<Loginscreen> createState() => _LoginscreenState();
+  State<LoginView> createState() => _LoginscreenState();
 }
 
-class _LoginscreenState extends State<Loginscreen> {
+class _LoginscreenState extends State<LoginView> {
   var isShowPassword = true;
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-
+    final theme = Theme.of(context);
     return Scaffold(
+      backgroundColor: theme.colorScheme.surface,
       body: SafeArea(
         child: Container(
           width: size.width,
@@ -77,12 +80,12 @@ class _LoginscreenState extends State<Loginscreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
-          spacing: 8,
+          spacing: columSpacing,
           children: [
             loadAssetImage(name: applogo, width: size.width * zero5),
             AppTextWidget(
                 text: welcomeText,
-                style: Theme.of(context).textTheme.headlineMedium),
+                style: Theme.of(context).textTheme.bodyLarge),
             AppTextFieldWidget(
               hintText: emailText,
             ),

@@ -18,9 +18,10 @@ final ThemeData lightTheme = ThemeData(
   ),
   textTheme: TextTheme(
     bodyLarge: GoogleFonts.openSans(
-      fontSize: 20,
-      fontWeight: FontWeight.w700,
-      color: Colors.black,
+      fontSize: 22,
+      letterSpacing: 1.2,
+      fontWeight: FontWeight.w600,
+      color: Colors.black.withValues(alpha: 0.8),
     ),
     bodyMedium: GoogleFonts.openSans(
       fontSize: 14.0,

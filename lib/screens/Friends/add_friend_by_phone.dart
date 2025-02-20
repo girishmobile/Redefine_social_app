@@ -6,8 +6,8 @@ import 'package:redefine_social_app/core/common/app_text_widget.dart';
 import 'package:redefine_social_app/core/components/components.dart';
 import 'package:redefine_social_app/core/constant/num_constants.dart';
 
-class AddFriendByPhoneNumber extends StatelessWidget {
-  const AddFriendByPhoneNumber({super.key});
+class AddFriendByPhone extends StatelessWidget {
+  const AddFriendByPhone({super.key});
 
   @override
   Widget build(BuildContext context) {

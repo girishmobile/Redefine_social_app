@@ -6,14 +6,14 @@ import 'package:redefine_social_app/core/constant/num_constants.dart';
 import 'package:redefine_social_app/core/constant/string_utility.dart';
 import 'package:redefine_social_app/core/router/route_name.dart';
 
-class AddFriends extends StatefulWidget {
-  const AddFriends({super.key});
+class AddFriendView extends StatefulWidget {
+  const AddFriendView({super.key});
 
   @override
-  State<AddFriends> createState() => _AddFriendsState();
+  State<AddFriendView> createState() => _AddFriendsState();
 }
 
-class _AddFriendsState extends State<AddFriends> {
+class _AddFriendsState extends State<AddFriendView> {
   // Static values to avoid recreating constants
   static const double _dividerThickness = 0.5;
   static const double _dividerHeight = 0.25;

@@ -16,8 +16,8 @@ const String dummyImageUrl = "https://picsum.photos/200";
 
 //String Name
 const String appName = 'Redefine Social';
-const String welcomeText = 'Welcome to Redefine';
-const String loginText = 'Login';
+const String welcomeText = 'Welcome';
+const String loginText = 'LOGIN';
 const String signUpText = 'Sign Up';
 const String fullName = 'Full name';
 const String forgotPasswordText = 'Forgot Password';

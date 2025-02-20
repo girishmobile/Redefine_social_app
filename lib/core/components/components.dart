@@ -36,23 +36,21 @@ commonButtonStyle({
   BuildContext? context,
 }) {
   return ElevatedButton.styleFrom(
-      textStyle: textStyle,
-      backgroundColor: backgroundColor ??
-          (context != null
-              ? Theme.of(context).colorScheme.primary
-              : Colors.blue),
-      foregroundColor: foregroundColor ??
-          (context != null
-              ? Theme.of(context).colorScheme.onPrimary
-              : Colors.blue),
-      disabledBackgroundColor: backgroundColor ?? Colors.blue,
-      disabledForegroundColor: foregroundColor ?? Colors.blue,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(borderRadius ?? eight),
-        side:
-            BorderSide(color: borderColor ?? Colors.blue, width: width ?? 0.0),
-      ),
-      elevation: zero);
+    textStyle: textStyle,
+    backgroundColor: backgroundColor ??
+        (context != null ? Theme.of(context).colorScheme.primary : Colors.blue),
+    foregroundColor: foregroundColor ??
+        (context != null
+            ? Theme.of(context).colorScheme.onPrimary
+            : Colors.blue),
+    disabledBackgroundColor: backgroundColor ?? Colors.blue,
+    disabledForegroundColor: foregroundColor ?? Colors.blue,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(borderRadius ?? eight),
+      side: BorderSide(color: borderColor ?? Colors.blue, width: width ?? 0.0),
+    ),
+    elevation: zero,
+  );
 }
 
 TextStyle commonTextStyle(

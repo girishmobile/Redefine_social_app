@@ -27,7 +27,7 @@ class AppScaffold extends StatelessWidget {
       backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: appBar ??
           AppBar(
-            elevation: zero5,
+            elevation: zero,
             backgroundColor: Theme.of(context).colorScheme.surface,
             iconTheme:
                 IconThemeData(color: Theme.of(context).colorScheme.primary),

@@ -13,15 +13,15 @@ class Contact {
   Contact(this.name);
 }
 
-class AddContacts extends StatelessWidget {
-  const AddContacts({super.key});
+class AddContactScreen extends StatelessWidget {
+  const AddContactScreen({super.key});
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
 
     return Scaffold(
       appBar: AppAppbar(
-        titleName: 'Add by Contacts',
+        titleName: 'ADD FROM CONTACTS',
       ),
       body: SafeArea(
         child: Padding(
