@@ -13,4 +13,8 @@ class RouteName {
   static const String friendList = '/FriendList';
   static const String addFriendByPhoneNumber = '/AddFriendByPhoneNumber';
   static const String addContacts = '/AddContacts';
+  static const String exportEvent = '/ExportEventView';
+  static const String createEvent = '/CreateEventView';
+  static const String publicEvent = '/PublicEventView';
+  static const String eventDetail = '/EventDetailView';
 }

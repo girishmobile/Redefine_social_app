@@ -10,6 +10,8 @@ const String messages = '$basePath/messages.png';
 const String whatsapp = '$basePath/whatsapp.png';
 const String facebook = '$basePath/facebook.png';
 const String share = '$basePath/share.png';
+const String gogoleCalendar = '$basePath/google-calendar.png';
+const String outlookCalendar = '$basePath/outlook-calendar.png';
 
 //Dummy URL
 const String dummyImageUrl = "https://picsum.photos/200";

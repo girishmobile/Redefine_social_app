@@ -2,28 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:redefine_social_app/core/components/components.dart';
 import 'package:redefine_social_app/core/constant/string_utility.dart';
 
-class AppProfileImage extends StatelessWidget {
-  const AppProfileImage({
+class AppImageView extends StatelessWidget {
+  const AppImageView({
     super.key,
+    this.imageUrl,
     this.height,
     this.width,
-    this.imageUrl,
   });
-
-  final double? height;
   final double? width;
+  final double? height;
   final String? imageUrl;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: width ?? 100,
-      height: height ?? 100,
-      decoration: BoxDecoration(
-          color: Colors.grey[100],
-          shape: BoxShape.circle,
-          border: Border.all(color: Colors.grey, width: 1)),
-      child: ClipOval(
+        width: width ?? 64,
+        height: height ?? 64,
         child: imageUrl != null && imageUrl!.isNotEmpty
             ? Image.network(
                 imageUrl!,
@@ -42,20 +36,9 @@ class AppProfileImage extends StatelessWidget {
               )
             : loadAssetImage(
                 name: placeholder,
+                width: width ?? 64,
+                height: height ?? 64,
                 fit: BoxFit.cover,
-                height: height,
-                width: width,
-              ),
-      ),
-    );
+              ));
   }
 }
-/**
- * Transform.scale(
-        scale: scale ?? 1,
-        child: loadAssetImage(
-          name: placeholder,
-          fit: BoxFit.cover,
-        ),
-      ),
- */

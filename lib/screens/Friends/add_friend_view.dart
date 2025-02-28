@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:redefine_social_app/core/common/app_appbar.dart';
 import 'package:redefine_social_app/core/common/app_icon_button.dart';
 import 'package:redefine_social_app/core/common/app_scaffold.dart';
 import 'package:redefine_social_app/core/common/app_text_widget.dart';
@@ -23,14 +24,8 @@ class _AddFriendsState extends State<AddFriendView> {
   @override
   Widget build(BuildContext context) {
     return AppScaffold(
-      appBar: AppBar(
-        elevation: zero5,
-        backgroundColor: Theme.of(context).colorScheme.surface,
-        iconTheme: IconThemeData(color: Theme.of(context).colorScheme.primary),
-        title: AppTextWidget(
-          text: 'ADD FRIENDS',
-          style: Theme.of(context).textTheme.bodyLarge,
-        ),
+      appBar: AppAppbar(
+        titleName: 'ADD FRIENDS',
       ),
       body: ListView(
         shrinkWrap: true,
@@ -94,7 +89,7 @@ class _AddFriendsState extends State<AddFriendView> {
   }) {
     return ListTile(
       onTap: onTap,
-      tileColor: Theme.of(context).colorScheme.primaryContainer,
+      tileColor: Theme.of(context).colorScheme.surface,
       leading: Icon(
         icon ?? Icons.contact_page,
         size: _iconSize,

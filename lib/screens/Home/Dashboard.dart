@@ -58,7 +58,7 @@ class _DashboardState extends State<Dashboard> {
               IconButton(
                 visualDensity: VisualDensity(horizontal: -4),
                 onPressed: () {
-                  Navigator.pushNamed(context, RouteName.friendsActivity);
+                  Navigator.pushNamed(context, RouteName.publicEvent);
                 },
                 icon: Icon(
                   Icons.public_sharp,
@@ -120,7 +120,9 @@ class _DashboardState extends State<Dashboard> {
       ),
       floatingActionButton: _selectedIndex == 1
           ? FloatingActionButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, RouteName.createEvent);
+              },
               backgroundColor: Theme.of(context).primaryColor,
               shape: CircleBorder(),
               child: Icon(Icons.add),

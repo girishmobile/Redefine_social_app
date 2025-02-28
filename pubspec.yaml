@@ -37,6 +37,7 @@ dependencies:
   intl: ^0.20.2
   google_fonts: ^6.2.1
   flutter_sticky_header: ^0.7.0
+  dropdown_button2: ^2.3.9
 
 dev_dependencies:
   flutter_test:
