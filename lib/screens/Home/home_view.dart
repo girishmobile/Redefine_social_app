@@ -3,7 +3,6 @@ import 'package:redefine_social_app/core/colors/color.dart';
 import 'package:redefine_social_app/core/common/app_list_row.dart';
 import 'package:redefine_social_app/core/common/app_text_widget.dart';
 import 'package:redefine_social_app/core/components/components.dart';
-import 'package:redefine_social_app/core/constant/num_constants.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -30,7 +29,7 @@ class _HomeScreenState extends State<HomeView> {
           Container(
             width: double.infinity,
             padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-            color: const Color.fromARGB(255, 226, 204, 173),
+            color: colorGold,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

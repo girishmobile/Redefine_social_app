@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:redefine_social_app/core/colors/color.dart';
 import 'package:redefine_social_app/core/common/app_text_widget.dart';
 
 class AppHeaderText extends StatelessWidget {
@@ -13,10 +14,10 @@ class AppHeaderText extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(8),
       width: size.width,
-      color: Theme.of(context).colorScheme.primaryContainer,
+      color: colorGold,
       child: AppTextWidget(
         text: text ?? '',
-        style: Theme.of(context).textTheme.headlineSmall,
+        style: Theme.of(context).textTheme.headlineMedium,
       ),
     );
   }

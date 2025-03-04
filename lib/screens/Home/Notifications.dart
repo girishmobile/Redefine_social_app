@@ -10,8 +10,8 @@ class Notifications extends StatelessWidget {
       appBar: AppAppbar(
         titleName: "Friend's Activity",
       ),
-      body: Center(
-        child: Text('Notification'),
+      body: Column(
+        children: [Text('ALL NOTIFICATION')],
       ),
     );
   }

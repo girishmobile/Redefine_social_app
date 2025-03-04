@@ -17,6 +17,11 @@ final ThemeData lightTheme = ThemeData(
     textTheme: ButtonTextTheme.primary,
   ),
   textTheme: TextTheme(
+    titleLarge: GoogleFonts.bangers(
+        fontSize: 24,
+        letterSpacing: 1.1,
+        fontWeight: FontWeight.w700,
+        color: Colors.black.withValues(alpha: 0.9)),
     bodyLarge: GoogleFonts.openSans(
       fontSize: 18,
       letterSpacing: 1.1,
@@ -33,18 +38,18 @@ final ThemeData lightTheme = ThemeData(
       fontSize: 12.0,
       letterSpacing: 1.1,
       fontWeight: FontWeight.w400,
-      color: Colors.black.withValues(alpha: 0.7),
+      color: Colors.black.withValues(alpha: 0.8),
     ),
     headlineLarge: GoogleFonts.openSans(
-        fontSize: 22.0,
+        fontSize: 20.0,
         letterSpacing: 1.1,
-        fontWeight: FontWeight.w800,
-        color: Colors.black),
+        fontWeight: FontWeight.w700,
+        color: Colors.black.withValues(alpha: 0.9)),
     headlineMedium: GoogleFonts.openSans(
         fontSize: 16.0,
         letterSpacing: 1.1,
         fontWeight: FontWeight.w600,
-        color: Colors.black),
+        color: Colors.black.withValues(alpha: 0.9)),
     headlineSmall: GoogleFonts.openSans(
         letterSpacing: 1.1,
         fontSize: 14.0,
@@ -91,9 +96,9 @@ final ThemeData darkTheme = ThemeData(
         color: Colors.grey,
       ),
       headlineLarge: GoogleFonts.openSans(
-          fontSize: 22.0,
+          fontSize: 20.0,
           letterSpacing: 1.1,
-          fontWeight: FontWeight.w800,
+          fontWeight: FontWeight.w700,
           color: Colors.white),
       headlineMedium: GoogleFonts.openSans(
           fontSize: 16.0,

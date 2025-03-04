@@ -51,15 +51,17 @@ class AppListRow extends StatelessWidget {
               child: Container(
                 padding: EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                    color: colorOrange, borderRadius: BorderRadius.circular(8)),
+                    color: colorOrange.withValues(alpha: 0.2),
+                    borderRadius: BorderRadius.circular(8)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('dawdkashkdh'),
-                        Text('dawdkashkdh'),
-                        Text('dawdkashkdh')
+                        Text('Event Title'),
+                        Text('Event Location'),
+                        Text('Event Date time')
                       ],
                     ),
                     AppImageView()

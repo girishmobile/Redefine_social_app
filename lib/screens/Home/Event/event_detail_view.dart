@@ -6,6 +6,7 @@ import 'package:redefine_social_app/core/common/app_profile_image.dart';
 import 'package:redefine_social_app/core/common/app_text_widget.dart';
 import 'package:redefine_social_app/core/constant/num_constants.dart';
 import 'package:redefine_social_app/core/constant/string_utility.dart';
+import 'package:redefine_social_app/screens/components/google_map_view.dart';
 
 class EventDetailView extends StatefulWidget {
   const EventDetailView({super.key});
@@ -130,8 +131,10 @@ class _EventDetailViewState extends State<EventDetailView> {
                     style: theme.textTheme.headlineMedium,
                   ),
                   rowItemWithIcon(
-                      "[# Street Name,Unity, City, State, Zip code]",
-                      Icons.location_on)
+                    "[# Street Name,Unity, City, State, Zip code]",
+                    Icons.location_on,
+                  ),
+                  GoogleMapView()
                 ],
               ),
             ),
@@ -152,6 +155,9 @@ class _EventDetailViewState extends State<EventDetailView> {
         ),
         AppTextWidget(text: text)
       ],
-    );
+    );  
   }
 }
+/***
+
+ */
