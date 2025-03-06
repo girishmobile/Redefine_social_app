@@ -50,7 +50,7 @@ commonButtonStyle({
     disabledBackgroundColor: backgroundColor ?? Colors.blue,
     disabledForegroundColor: foregroundColor ?? Colors.blue,
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(borderRadius ?? eight),
+      borderRadius: BorderRadius.circular(borderRadius ?? four),
       side: BorderSide(color: borderColor ?? Colors.blue, width: width ?? 0.0),
     ),
     elevation: zero,
@@ -214,5 +214,40 @@ void showBottomsheetMenu(BuildContext context) {
         ),
       );
     },
+  );
+}
+
+commonHeaderWithIcon(String title, IconData iconName, TextTheme themeText) {
+  return Row(
+    children: [
+      Icon(
+        iconName,
+        size: 36,
+      ),
+      AppTextWidget(
+        text: title,
+        style: themeText.titleLarge,
+      ),
+    ],
+  );
+}
+
+commonBoxDecoration1({
+  BoxShape shape = BoxShape.rectangle,
+  double? radius,
+  Color? color,
+  Color? colorBorder,
+  double? borderWidth,
+}) {
+  return BoxDecoration(
+    shape: shape,
+    borderRadius: shape != BoxShape.circle || radius != null
+        ? BorderRadius.circular(radius ?? 0)
+        : null,
+    color: color,
+    border: Border.all(
+      color: colorBorder ?? Colors.transparent,
+      width: borderWidth ?? 0,
+    ),
   );
 }

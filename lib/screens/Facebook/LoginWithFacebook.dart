@@ -77,7 +77,7 @@ class _LoginWithFacebookState extends State<LoginWithFacebook> {
             top: 5,
             text: connectWitFacebook,
             width: size.width,
-            buttonStyle: commonButtonStyle(context: context),
+            btnStyle: commonButtonStyle(context: context),
             textStyle: Theme.of(context).textTheme.labelMedium,
             onPressed: () {},
           ),

@@ -10,7 +10,6 @@ final ThemeData lightTheme = ThemeData(
     onPrimary: Colors.white,
     primaryContainer: const Color.fromARGB(255, 251, 249, 247),
   ),
-  dialogBackgroundColor: Colors.white,
   scaffoldBackgroundColor: Colors.white,
   buttonTheme: ButtonThemeData(
     buttonColor: Colors.white,
@@ -19,7 +18,7 @@ final ThemeData lightTheme = ThemeData(
   textTheme: TextTheme(
     titleLarge: GoogleFonts.bangers(
         fontSize: 24,
-        letterSpacing: 1.1,
+        letterSpacing: 1.2,
         fontWeight: FontWeight.w700,
         color: Colors.black.withValues(alpha: 0.9)),
     bodyLarge: GoogleFonts.openSans(
@@ -38,7 +37,7 @@ final ThemeData lightTheme = ThemeData(
       fontSize: 12.0,
       letterSpacing: 1.1,
       fontWeight: FontWeight.w400,
-      color: Colors.black.withValues(alpha: 0.8),
+      color: Colors.black.withValues(alpha: 0.6),
     ),
     headlineLarge: GoogleFonts.openSans(
         fontSize: 20.0,
@@ -75,9 +74,14 @@ final ThemeData darkTheme = ThemeData(
       onPrimary: Colors.black,
       primaryContainer: const Color.fromARGB(255, 251, 249, 247),
     ),
-    dialogBackgroundColor: Colors.black,
     scaffoldBackgroundColor: Colors.black,
     textTheme: TextTheme(
+      titleLarge: GoogleFonts.bangers(
+        fontSize: 24,
+        letterSpacing: 1.2,
+        fontWeight: FontWeight.w700,
+        color: Colors.white,
+      ),
       bodyLarge: GoogleFonts.openSans(
           fontSize: 18,
           letterSpacing: 1.1,

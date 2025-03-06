@@ -1,72 +1,46 @@
 import 'package:flutter/material.dart';
+import 'package:redefine_social_app/core/colors/color.dart';
 import 'package:redefine_social_app/core/common/app_text_widget.dart';
 
 class AppButtonWidget extends StatelessWidget {
   const AppButtonWidget({
     super.key,
-    this.borderColor,
-    this.borderRadius,
-    this.borderWidth,
-    this.buttonStyle,
-    this.color,
-    this.elevation,
-    this.height,
-    this.icon,
-    this.isShowBorder,
-    this.isShowIcon,
-    this.isShowLoading,
-    this.isShowProgress,
-    this.isShowShadow,
-    this.onPressed,
-    this.shadowColor,
-    this.shadowOffsetX,
-    this.shadowOffsetY,
-    this.shadowRadius,
-    this.shadowSpread,
     this.text,
-    this.textColor,
+    this.onPressed,
     this.textStyle,
+    this.horizontal,
+    this.vertical,
     this.top,
     this.bottom,
     this.left,
+    this.icon,
     this.right,
+    this.btnStyle,
+    this.height,
+    this.isShowIcon = false,
     this.width,
   });
 
   final String? text;
+  final double? horizontal;
+  final Widget? icon;
   final double? left;
   final double? right;
   final double? top;
   final double? bottom;
-  final double? borderRadius;
+  final double? vertical;
   final double? width;
   final double? height;
   final bool? isShowIcon;
-  final Widget? icon;
-  final Color? color;
-  final Color? textColor;
   final TextStyle? textStyle;
-  final ButtonStyle? buttonStyle;
-  final bool? isShowBorder;
-  final Color? borderColor;
-  final double? borderWidth;
-  final bool? isShowShadow;
-  final double? elevation;
-  final double? shadowRadius;
-  final double? shadowSpread;
-  final Color? shadowColor;
-  final double? shadowOffsetX;
-  final double? shadowOffsetY;
-  final bool? isShowLoading;
-  final bool? isShowProgress;
-
   final VoidCallback? onPressed;
+  final ButtonStyle? btnStyle;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: width,
-      height: height ?? 44,
+      height: height ?? 48,
       margin: EdgeInsets.only(
           left: left ?? 0,
           right: right ?? 0,
@@ -75,7 +49,13 @@ class AppButtonWidget extends StatelessWidget {
       child: ElevatedButton.icon(
           onPressed: onPressed,
           icon: isShowIcon ?? true ? icon : null,
-          style: buttonStyle,
+          style: btnStyle ??
+              ElevatedButton.styleFrom(
+                backgroundColor: colorOrange,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(4),
+                ),
+              ),
           label: AppTextWidget(
             text: text,
             style: textStyle ?? Theme.of(context).textTheme.labelMedium,

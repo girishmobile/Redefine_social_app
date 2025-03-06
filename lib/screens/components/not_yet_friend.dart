@@ -44,7 +44,7 @@ class NotYetFriend extends StatelessWidget {
             ),
             onPressed: () => Navigator.pushNamed(context, RouteName.addFriends),
             text: addFriends,
-            buttonStyle: commonButtonStyle(context: context),
+            btnStyle: commonButtonStyle(context: context),
           )
         ],
       ),

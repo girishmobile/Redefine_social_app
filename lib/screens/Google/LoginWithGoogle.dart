@@ -77,7 +77,7 @@ class _LoginWithGoogleState extends State<LoginWithGoogle> {
             top: 5,
             text: connectWithGoogle,
             width: size.width,
-            buttonStyle: commonButtonStyle(context: context),
+            btnStyle: commonButtonStyle(context: context),
             textStyle: Theme.of(context).textTheme.labelMedium,
             onPressed: () {},
           ),

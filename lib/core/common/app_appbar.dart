@@ -34,7 +34,6 @@ class AppAppbar extends StatelessWidget implements PreferredSizeWidget {
         style: theme.textTheme.bodyLarge,
       );
     }
-
     return loadAssetImage(
       name: applogo,
       width: size.width * (isPortrait ? 0.4 : 0.2),
@@ -54,4 +53,5 @@ class AppAppbar extends StatelessWidget implements PreferredSizeWidget {
 //                   width: size.width * zero2,
 //                 ),
 /**
+
  */

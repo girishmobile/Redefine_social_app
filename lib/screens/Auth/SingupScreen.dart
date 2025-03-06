@@ -75,7 +75,7 @@ class _SignupScreenState extends State<SignupScreen> {
             text: createAccount,
             onPressed: () {},
             width: size.width,
-            buttonStyle: commonButtonStyle(context: context),
+            btnStyle: commonButtonStyle(context: context),
             textStyle: Theme.of(context).textTheme.labelMedium,
           ),
           AppTextWidget(

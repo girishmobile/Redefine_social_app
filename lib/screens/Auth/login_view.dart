@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:redefine_social_app/core/common/app_button_widget.dart';
 import 'package:redefine_social_app/core/common/app_divider_widget.dart';
-import 'package:redefine_social_app/core/common/app_gradient_button.dart';
 import 'package:redefine_social_app/core/common/app_text_field_widget.dart';
 import 'package:redefine_social_app/core/common/app_text_widget.dart';
-import 'package:redefine_social_app/core/common/app_textfield_view.dart';
 import 'package:redefine_social_app/core/components/components.dart';
 import 'package:redefine_social_app/core/constant/num_constants.dart';
 import 'package:redefine_social_app/core/constant/string_utility.dart';
@@ -111,7 +109,7 @@ class _LoginscreenState extends State<LoginView> {
                     (Route<dynamic> route) => false);
               },
               width: size.width,
-              buttonStyle: commonButtonStyle(context: context),
+              btnStyle: commonButtonStyle(context: context),
               textStyle: Theme.of(context).textTheme.labelMedium,
             ),
             InkWell(
@@ -147,7 +145,7 @@ class _LoginscreenState extends State<LoginView> {
                 Navigator.pushNamed(context, RouteName.facebookScreen);
               },
               width: size.width,
-              buttonStyle: commonButtonStyle(
+              btnStyle: commonButtonStyle(
                 backgroundColor: Theme.of(context).colorScheme.surface,
                 foregroundColor: Theme.of(context).colorScheme.primary,
               ),
@@ -161,7 +159,7 @@ class _LoginscreenState extends State<LoginView> {
                 Navigator.pushNamed(context, RouteName.googleScreen);
               },
               width: size.width,
-              buttonStyle: commonButtonStyle(
+              btnStyle: commonButtonStyle(
                 backgroundColor: Theme.of(context).colorScheme.surface,
                 foregroundColor: Theme.of(context).colorScheme.primary,
                 borderColor: Theme.of(context).colorScheme.primary,
@@ -175,3 +173,5 @@ class _LoginscreenState extends State<LoginView> {
     );
   }
 }
+/**
+ */

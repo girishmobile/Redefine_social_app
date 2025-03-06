@@ -57,7 +57,7 @@ class AddFriendByPhone extends StatelessWidget {
                 width: screenWidth,
                 onPressed: () {},
                 bottom: columSpacing,
-                buttonStyle: commonButtonStyle(context: context),
+                btnStyle: commonButtonStyle(context: context),
               ),
             )
           ],

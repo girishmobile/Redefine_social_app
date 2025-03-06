@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
 class AppDividerWidget extends StatelessWidget {
-  const AppDividerWidget(
-      {super.key,
-      this.color,
-      this.height,
-      this.indent,
-      this.endIndent,
-      this.thickness,
-      this.width});
+  const AppDividerWidget({
+    super.key,
+    this.color,
+    this.height,
+    this.indent,
+    this.endIndent,
+    this.thickness,
+    this.width,
+  });
 
   final Color? color;
   final double? height;

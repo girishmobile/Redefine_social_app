@@ -60,7 +60,7 @@ class AddContactScreen extends StatelessWidget {
                 text: "ADD OTHER NUMBER",
                 width: size.width,
                 textStyle: Theme.of(context).textTheme.labelMedium,
-                buttonStyle: commonButtonStyle(context: context),
+                btnStyle: commonButtonStyle(context: context),
               ),
               Expanded(child: ContactList()),
               AppButtonWidget(
@@ -68,7 +68,7 @@ class AddContactScreen extends StatelessWidget {
                 text: "NEXT",
                 width: size.width,
                 textStyle: Theme.of(context).textTheme.labelMedium,
-                buttonStyle: commonButtonStyle(context: context),
+                btnStyle: commonButtonStyle(context: context),
               ),
             ],
           ),

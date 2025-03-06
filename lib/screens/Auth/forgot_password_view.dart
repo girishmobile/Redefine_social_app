@@ -83,7 +83,7 @@ class _ForgotPasswordState extends State<ForgotPasswordView> {
               text: sendloginText,
               onPressed: _handleSubmit,
               width: size.width,
-              buttonStyle: commonButtonStyle(context: context),
+              btnStyle: commonButtonStyle(context: context),
               textStyle: Theme.of(context).textTheme.labelMedium,
             ),
             InkWell(
@@ -119,7 +119,7 @@ class _ForgotPasswordState extends State<ForgotPasswordView> {
                 Navigator.pushNamed(context, RouteName.facebookScreen);
               },
               width: size.width,
-              buttonStyle: commonButtonStyle(
+              btnStyle: commonButtonStyle(
                 backgroundColor: Theme.of(context).colorScheme.surface,
                 foregroundColor: Theme.of(context).colorScheme.primary,
               ),

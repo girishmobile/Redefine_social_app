@@ -2,27 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:redefine_social_app/core/components/components.dart';
 
 class AppTextFieldWidget extends StatelessWidget {
-  const AppTextFieldWidget({
-    super.key,
-    this.hintText,
-    this.controller,
-    this.prefixIcon,
-    this.suffixIcon,
-    this.obscureText = false,
-    this.readOnly = false,
-    this.left,
-    this.right,
-    this.top,
-    this.bottom,
-    this.borderColor,
-    this.borderRadius,
-    this.height,
-    this.fillColor,
-    this.style,
-    this.validator,
-    this.onChanged,
-    this.onTap,
-  });
+  const AppTextFieldWidget(
+      {super.key,
+      this.hintText,
+      this.controller,
+      this.prefixIcon,
+      this.suffixIcon,
+      this.obscureText = false,
+      this.readOnly = false,
+      this.left,
+      this.right,
+      this.top,
+      this.bottom,
+      this.borderColor,
+      this.borderRadius,
+      this.height,
+      this.fillColor,
+      this.style,
+      this.validator,
+      this.onChanged,
+      this.onTap,
+      this.maxLine});
   final String? hintText;
   final TextEditingController? controller;
   final Widget? prefixIcon;
@@ -41,10 +41,12 @@ class AppTextFieldWidget extends StatelessWidget {
   final String? Function(String?)? validator;
   final void Function(String)? onChanged;
   final void Function()? onTap;
+  final int? maxLine;
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height ?? 40,
+      height: height,
       margin: EdgeInsets.only(
           left: left ?? 0,
           right: right ?? 0,
@@ -54,6 +56,7 @@ class AppTextFieldWidget extends StatelessWidget {
         controller: controller,
         obscureText: obscureText ?? false,
         readOnly: readOnly ?? false,
+        maxLines: maxLine ?? 1,
         cursorColor: Colors.black,
         style: style ?? Theme.of(context).textTheme.bodyMedium,
         validator: validator,
@@ -65,7 +68,7 @@ class AppTextFieldWidget extends StatelessWidget {
           suffixIcon: suffixIcon,
           fillColor: fillColor,
           filled: true,
-          contentPadding: EdgeInsets.symmetric(horizontal: 10),
+          contentPadding: EdgeInsets.symmetric(horizontal: 12),
           focusedBorder: commonBorderView(borderColor: Colors.black),
           enabledBorder: commonBorderView(),
           border: commonBorderView(),

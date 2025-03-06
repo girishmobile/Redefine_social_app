@@ -33,11 +33,10 @@ class AppGradientButton extends StatelessWidget {
       alignment: Alignment.center,
       height: height ?? 44,
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [colorOrange, colorPurple], // Gradient colors
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
+        gradient: RadialGradient(
+            colors: [colorOrange, colorPurple], // Gradient colors
+            center: Alignment.center,
+            radius: 0.1),
         borderRadius:
             BorderRadius.circular(borderRadius ?? 30), // Border radius
         boxShadow: [
