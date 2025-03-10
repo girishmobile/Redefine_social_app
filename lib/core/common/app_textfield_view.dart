@@ -3,15 +3,7 @@ import 'package:redefine_social_app/core/colors/color.dart';
 
 class AppTextfieldView extends StatelessWidget {
   const AppTextfieldView({super.key, this.text});
-
   final String? text;
-
-  //   let TextBlack = UIColor(red: 39.0/255.0, green: 40.0/255.0, blue: 42.0/255.0, alpha: 1)
-  //   let TextLight = UIColor(red: 102.0/255.0, green: 102.0/255.0, blue: 102.0/255.0, alpha: 1)
-  //   let sepratedLine = UIColor(red: 246.0/255.0, green: 246.0/255.0, blue: 244.0/255.0, alpha: 1)
-  //   let tblcellBackground = UIColor(red: 242.0/255.0, green:242.0/255.0, blue: 242.0/255.0, alpha: 1)
-  //   let borderColor = UIColor(red: 234.0/255.0, green:235.0/255.0, blue: 237.0/255.0, alpha: 1)
-
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;

@@ -9,7 +9,6 @@ import 'package:redefine_social_app/core/constant/num_constants.dart';
 class BasicSingleEvent extends StatefulWidget {
   const BasicSingleEvent({super.key, this.onPressed});
   final void Function()? onPressed;
-
   @override
   State<BasicSingleEvent> createState() => _BasicSingleEventState();
 }
@@ -32,7 +31,6 @@ class _BasicSingleEventState extends State<BasicSingleEvent> {
   ];
   String? selectedEventType;
   String? selectedEvent;
-
   @override
   Widget build(BuildContext context) {
     final themeText = Theme.of(context).textTheme;
