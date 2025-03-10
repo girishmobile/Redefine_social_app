@@ -70,7 +70,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppAppbar(
+      appBar: MyAppBar(
         centerTitle: true,
         title: AppTextWidget(
           text: "Edit Profile",

@@ -3,8 +3,8 @@ import 'package:redefine_social_app/core/common/app_text_widget.dart';
 import 'package:redefine_social_app/core/components/components.dart';
 import 'package:redefine_social_app/core/constant/string_utility.dart';
 
-class AppAppbar extends StatelessWidget implements PreferredSizeWidget {
-  const AppAppbar({super.key, this.titleName, this.actions,this.leading,this.title,this.centerTitle});
+class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const MyAppBar({super.key, this.titleName, this.actions,this.leading,this.title,this.centerTitle});
   final String? titleName;
   final List<Widget>? actions;
   final Widget? leading;
