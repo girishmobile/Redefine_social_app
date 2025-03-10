@@ -12,6 +12,7 @@ import 'package:redefine_social_app/screens/Friends/FriendList.dart';
 import 'package:redefine_social_app/screens/Google/LoginWithGoogle.dart';
 import 'package:redefine_social_app/screens/Home/Dashboard.dart';
 import 'package:redefine_social_app/screens/Home/Event/event_detail_view.dart';
+import 'package:redefine_social_app/screens/Home/edit_profile/edit_profile_screen.dart';
 import 'package:redefine_social_app/screens/Home/export_event_view.dart';
 import 'package:redefine_social_app/screens/Home/friends_activity_view.dart';
 import 'package:redefine_social_app/screens/Home/home_view.dart';
@@ -58,6 +59,8 @@ class RouteGenerated {
         return MaterialPageRoute(builder: (_) => const PublicEventView());
       case RouteName.eventDetail:
         return MaterialPageRoute(builder: (_) => const EventDetailView());
+      case RouteName.editProfile:
+        return MaterialPageRoute(builder: (_) => const EditProfileScreen());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(

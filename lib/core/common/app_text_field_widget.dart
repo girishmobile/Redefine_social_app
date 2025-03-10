@@ -20,6 +20,7 @@ class AppTextFieldWidget extends StatelessWidget {
       this.fillColor,
       this.style,
       this.validator,
+        this.keyboardType,
       this.onChanged,
       this.onTap,
       this.maxLine});
@@ -38,6 +39,7 @@ class AppTextFieldWidget extends StatelessWidget {
   final Color? fillColor;
   final Color? borderColor;
   final TextStyle? style;
+  final TextInputType? keyboardType;
   final String? Function(String?)? validator;
   final void Function(String)? onChanged;
   final void Function()? onTap;
@@ -58,6 +60,8 @@ class AppTextFieldWidget extends StatelessWidget {
         readOnly: readOnly ?? false,
         maxLines: maxLine ?? 1,
         cursorColor: Colors.black,
+
+        keyboardType: keyboardType,
         style: style ?? Theme.of(context).textTheme.bodyMedium,
         validator: validator,
         onChanged: onChanged,

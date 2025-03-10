@@ -4,9 +4,12 @@ import 'package:redefine_social_app/core/components/components.dart';
 import 'package:redefine_social_app/core/constant/string_utility.dart';
 
 class AppAppbar extends StatelessWidget implements PreferredSizeWidget {
-  const AppAppbar({super.key, this.titleName, this.actions});
+  const AppAppbar({super.key, this.titleName, this.actions,this.leading,this.title,this.centerTitle});
   final String? titleName;
   final List<Widget>? actions;
+  final Widget? leading;
+  final  Widget? title;
+  final bool? centerTitle;
   @override
   Size get preferredSize => Size.fromHeight(kToolbarHeight);
   @override
@@ -16,13 +19,15 @@ class AppAppbar extends StatelessWidget implements PreferredSizeWidget {
     bool isPortrait =
         MediaQuery.of(context).orientation == Orientation.portrait;
     return AppBar(
+      centerTitle: centerTitle,
       surfaceTintColor: Colors.transparent,
       shadowColor: theme.colorScheme.primary.withValues(alpha: 0.3),
       actionsIconTheme: IconThemeData(color: theme.colorScheme.primary),
       elevation: 1,
+      leading: leading,
       backgroundColor: theme.colorScheme.surface,
       iconTheme: IconThemeData(color: theme.colorScheme.primary),
-      title: _buildTitles(size, isPortrait, theme),
+      title: title??_buildTitles(size, isPortrait, theme),
       actions: actions,
     );
   }

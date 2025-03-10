@@ -12,6 +12,8 @@ import 'package:redefine_social_app/screens/Home/Event/components/guests_view.da
 import 'package:redefine_social_app/screens/Home/Event/components/send_view.dart';
 import 'package:redefine_social_app/screens/Home/Event/components/wallet_view.dart';
 
+import '../../../core/StepProgressView.dart';
+
 class CreateEventView extends StatefulWidget {
   const CreateEventView({super.key});
 
@@ -45,7 +47,6 @@ class _CreateEventViewState extends State<CreateEventView> {
 
   bool isMultipleEvent = false;
   bool isSingleEvent = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,101 +57,18 @@ class _CreateEventViewState extends State<CreateEventView> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Expanded(child: _steps[currentStep]),
-            Container(
-                padding: EdgeInsets.symmetric(vertical: 8),
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    /// Progress Line Behind Steps
-                    Positioned(
-                      top: 20, // Aligns progress line with step circles
-                      left: 0,
-                      right: 0,
-                      child: Row(
-                        children:
-                            List.generate(_stepLabels.length * 2 - 1, (index) {
-                          if (index.isOdd) {
-                            // Skip first and last line
-                            if (index == 1 ||
-                                index == _stepLabels.length * 2 - 3) {
-                              return SizedBox(
-                                  width: 20); // Empty space instead of line
-                            }
-                            return Expanded(
-                              child: Container(
-                                height: 4,
-                                color: (index ~/ 2) < currentStep
-                                    ? Colors.black
-                                    : Colors.grey,
-                              ),
-                            );
-                          } else {
-                            return SizedBox(); // Empty to maintain structure
-                          }
-                        }),
-                      ),
-                    ),
 
-                    /// Stepper Row (Circles + Labels)
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: List.generate(_stepLabels.length, (index) {
-                        bool isCompleted = index < currentStep;
-                        bool isCurrent = index == currentStep;
-                        return Expanded(
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              /// Step Indicator (Circle)
-                              GestureDetector(
-                                onTap: () => _onStepTapped(index),
-                                child: Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    color: isCompleted
-                                        ? Colors.black
-                                        : (isCurrent
-                                            ? Colors.white
-                                            : Colors.grey),
-                                    shape: BoxShape.circle,
-                                    border: Border.all(
-                                      color: Colors.black,
-                                      width: isCurrent ? 2 : 1,
-                                    ),
-                                  ),
-                                  alignment: Alignment.center,
-                                  child: isCompleted
-                                      ? Icon(Icons.check,
-                                          color: Colors.white, size: 24)
-                                      : Text(
-                                          "${index + 1}",
-                                          style: TextStyle(
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.bold,
-                                            color: isCurrent
-                                                ? Colors.black
-                                                : Colors.white,
-                                          ),
-                                        ),
-                                ),
-                              ),
-                              const SizedBox(
-                                  height: 4), // Space between circle and text
-                              /// Step Label Below Circle
-                              Text(
-                                _stepLabels[index],
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                        );
-                      }),
-                    ),
-                  ],
-                ))
+            Expanded(child: _steps[currentStep]),
+            StepProgressView(
+
+              width: MediaQuery.of(context).size.width,
+              initialStep: 1,
+              item: _stepLabels,
+              inactiveColor: Colors.white,
+              onStepTapped: _onStepTapped,
+              activeColor: Colors.black,
+            ),
+
           ],
         ),
       ),
