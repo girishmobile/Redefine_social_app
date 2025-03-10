@@ -49,7 +49,7 @@ class _CreateEventViewState extends State<CreateEventView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppAppbar(
+      appBar: MyAppBar(
         titleName: 'CREATE EVENT',
       ),
       body: SafeArea(
@@ -175,7 +175,7 @@ class _CreateEventViewState extends State<CreateEventView> {
                         },
                       )
                     : Column(
-                        spacing: columSpacing,
+                        spacing: columnSpacing,
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

@@ -41,7 +41,7 @@ class _SignupScreenState extends State<SignupScreen> {
   Widget _singUpView({required Size size, required BuildContext context}) {
     return Form(
       child: Column(
-        spacing: columSpacing,
+        spacing: columnSpacing,
         children: [
           AppTextWidget(
               text: signUpText,

@@ -10,7 +10,7 @@ const String messages = '$basePath/messages.png';
 const String whatsapp = '$basePath/whatsapp.png';
 const String facebook = '$basePath/facebook.png';
 const String share = '$basePath/share.png';
-const String gogoleCalendar = '$basePath/google-calendar.png';
+const String googleCalendar = '$basePath/google-calendar.png';
 const String outlookCalendar = '$basePath/outlook-calendar.png';
 
 //Dummy URL
@@ -55,4 +55,4 @@ const String receiveEmail = 'Receive Email';
 const String emailConfirmationText =
     'You will receive an email confirmation for you to verify your account';
 const String addFriends = 'ADD FRIENDS';
-const String notyetAnyfriends = 'You have not added any friends yet.';
+const String notyetanyfriends = 'You have not added any friends yet.';

@@ -44,7 +44,7 @@ class _LoginWithGoogleState extends State<LoginWithGoogle> {
   _loginWithGoogleView({required Size size, required BuildContext context}) {
     return Form(
       child: Column(
-        spacing: columSpacing,
+        spacing: columnSpacing,
         children: [
           AppProfileImage(
             imageUrl: dummyImageUrl,

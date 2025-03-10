@@ -7,7 +7,7 @@ class FriendsActivityView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppAppbar(
+      appBar: MyAppBar(
         titleName: "Friend's Activity",
       ),
       body: Center(

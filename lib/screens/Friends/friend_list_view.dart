@@ -13,7 +13,7 @@ class _FriendListState extends State<FriendList> {
   @override
   Widget build(BuildContext context) {
     return AppScaffold(
-      appBar: AppAppbar(titleName: 'FRIENDS'),
+      appBar: MyAppBar(titleName: 'FRIENDS'),
       body: Center(
         child: Text('List of Friends'),
       ),

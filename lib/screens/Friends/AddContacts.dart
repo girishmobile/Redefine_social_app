@@ -40,14 +40,14 @@ class AddContacts extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
-      appBar: AppAppbar(
+      appBar: MyAppBar(
         titleName: 'Add by Contacts',
       ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(containerPadding),
           child: Column(
-            spacing: columSpacing,
+            spacing: columnSpacing,
             children: [
               AppSearchBar(),
               SizedBox(

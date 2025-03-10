@@ -24,7 +24,7 @@ class _AddFriendsState extends State<AddFriendView> {
   @override
   Widget build(BuildContext context) {
     return AppScaffold(
-      appBar: AppAppbar(
+      appBar: MyAppBar(
         titleName: 'ADD FRIENDS',
       ),
       body: ListView(

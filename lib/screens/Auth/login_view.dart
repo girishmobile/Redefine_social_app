@@ -78,7 +78,7 @@ class _LoginscreenState extends State<LoginView> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
-          spacing: columSpacing,
+          spacing: columnSpacing,
           children: [
             loadAssetImage(name: applogo, width: size.width * zero5),
             AppTextWidget(

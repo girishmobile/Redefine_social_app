@@ -19,7 +19,7 @@ class DetailsView extends StatelessWidget {
         child: SingleChildScrollView(
           physics: ScrollPhysics(),
           child: Column(
-            spacing: columSpacing,
+            spacing: columnSpacing,
             children: [
               AppTextWidget(
                 text:

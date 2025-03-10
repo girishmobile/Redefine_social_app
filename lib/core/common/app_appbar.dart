@@ -3,8 +3,8 @@ import 'package:redefine_social_app/core/common/app_text_widget.dart';
 import 'package:redefine_social_app/core/components/components.dart';
 import 'package:redefine_social_app/core/constant/string_utility.dart';
 
-class AppAppbar extends StatelessWidget implements PreferredSizeWidget {
-  const AppAppbar({super.key, this.titleName, this.actions});
+class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const MyAppBar({super.key, this.titleName, this.actions});
   final String? titleName;
   final List<Widget>? actions;
   @override
@@ -40,18 +40,3 @@ class AppAppbar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 }
-
-// /titleName?.isNotEmpty == true
-//           ? AppTextWidget(
-//               text: titleName,
-//               style: Theme.of(context).textTheme.bodyLarge,
-//             )
-//           : isPortrait
-//               ? loadAssetImage(name: applogo, width: size.width * zero4)
-//               : loadAssetImage(
-//                   name: applogo,
-//                   width: size.width * zero2,
-//                 ),
-/**
-
- */

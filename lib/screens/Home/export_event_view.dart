@@ -9,7 +9,7 @@ class ExportEventView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> frndlist = [
+    List<String> friendList = [
       'Friend #1',
       'Friend #2',
       'Friend #3',
@@ -17,7 +17,7 @@ class ExportEventView extends StatelessWidget {
       'Friend #5'
     ];
     return Scaffold(
-      appBar: AppAppbar(
+      appBar: MyAppBar(
         titleName: "Export Events",
         actions: [
           TextButton(
@@ -29,7 +29,7 @@ class ExportEventView extends StatelessWidget {
         ],
       ),
       body: AppListView(
-        friendList: frndlist,
+        friendList: friendList,
         isCheckBox: true,
       ),
     );

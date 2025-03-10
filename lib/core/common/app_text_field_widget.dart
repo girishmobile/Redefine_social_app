@@ -77,3 +77,6 @@ class AppTextFieldWidget extends StatelessWidget {
     );
   }
 }
+//Thi is the basic button widget of app you can use it in the all view and screen with common style
+//if you want to customize it plz send above parameter other wise it's take same default button
+//other wise it make support the method to customize the button

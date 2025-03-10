@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:redefine_social_app/core/colors/color.dart';
-import 'package:redefine_social_app/core/common/app_image_view.dart';
 import 'package:redefine_social_app/core/common/app_text_widget.dart';
 import 'package:redefine_social_app/core/constant/num_constants.dart';
 import 'package:redefine_social_app/core/constant/string_utility.dart';
