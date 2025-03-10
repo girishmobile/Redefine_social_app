@@ -8,7 +8,7 @@ class ImagePickerHelper {
   final ImagePicker _picker = ImagePicker();
 
   Future<File?> pickImage({required ImageSource source, BuildContext? context}) async {
-    if (!(await _checkPermissions(source))) {
+    if (!(await _requestPermission(source))) {
       debugPrint("Permission denied");
       return null;
     }
@@ -24,7 +24,7 @@ class ImagePickerHelper {
     }
   }
 
-  Future<bool> _checkPermissions(ImageSource source) async {
+/*  Future<bool> _checkPermissions(ImageSource source) async {
     if (source == ImageSource.camera) {
       var status = await Permission.camera.request();
       return status.isGranted;
@@ -41,6 +41,26 @@ class ImagePickerHelper {
         var status = await Permission.photos.request();
         return status.isGranted;
       }
+    }
+  }*/
+  Future _requestPermission(ImageSource source) async {
+    final cameraPermission = await Permission.camera.request();
+    final storagePermission = await Permission.storage.request();
+    final photosPermission = await Permission.photos.request();
+    Permission permission =
+    source == ImageSource.camera ? Permission.camera : Permission.photos;
+
+    if (cameraPermission.isGranted) {
+      return true;
+    } else if (storagePermission.isGranted || photosPermission.isGranted) {
+      return true;
+    } else if (cameraPermission.isDenied ||
+        photosPermission.isDenied ||
+        storagePermission.isDenied) {
+      await openAppSettings();
+      return false;
+    } else {
+      return await permission.request().isGranted;
     }
   }
   Future<File?> _cropImage(File imageFile, BuildContext? context) async {
