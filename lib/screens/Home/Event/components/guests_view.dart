@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:redefine_social_app/core/common/app_button_widget.dart';
-import 'package:redefine_social_app/core/common/app_image_view.dart';
 import 'package:redefine_social_app/core/components/components.dart';
 import 'package:redefine_social_app/core/constant/num_constants.dart';
-import 'package:redefine_social_app/core/constant/string_utility.dart';
 
 class GuestsView extends StatelessWidget {
   const GuestsView({super.key});
@@ -16,7 +14,7 @@ class GuestsView extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: SingleChildScrollView(
           child: Column(
-            spacing: columSpacing,
+            spacing: columnSpacing,
             children: [
               _buildVisibilitySection(themeText, context),
             ],

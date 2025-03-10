@@ -42,7 +42,7 @@ class _BasicSingleEventState extends State<BasicSingleEvent> {
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          spacing: columSpacing,
+          spacing: columnSpacing,
           children: [
             _commonHeaderWithIcon(
                 'EVENT BASICS', Icons.event_note_outlined, themeText),
@@ -103,7 +103,7 @@ class _BasicSingleEventState extends State<BasicSingleEvent> {
             ),
             AppTextWidget(
               text:
-                  "If private, then only invited guests will be able to find this event in their own newsfeed. If it's public, then it will appear in the newsfeed of other users who did not attend and users can search for event.",
+                  "If private, then only invited guests will be able to find this event in their own nested. If it's public, then it will appear in the newsreel of other users who did not attend and users can search for event.",
               style: themeText.bodySmall,
             ),
             Center(

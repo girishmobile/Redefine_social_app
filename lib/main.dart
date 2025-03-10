@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Redefine Social App',
       theme: lightTheme,
       darkTheme: darkTheme,
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.system,  
       initialRoute: RouteName.splashScreen,
       onGenerateRoute: RouteGenerated.generateRoute,
       debugShowCheckedModeBanner: false,

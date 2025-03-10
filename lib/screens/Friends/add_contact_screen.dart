@@ -20,14 +20,14 @@ class AddContactScreen extends StatelessWidget {
     var size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: AppAppbar(
+      appBar: MyAppBar(
         titleName: 'ADD FROM CONTACTS',
       ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(containerPadding),
           child: Column(
-            spacing: columSpacing,
+            spacing: columnSpacing,
             children: [
               AppSearchBar(),
               SizedBox(

@@ -44,7 +44,7 @@ class _LoginWithFacebookState extends State<LoginWithFacebook> {
   _loginWithFacebookView({required Size size, required BuildContext context}) {
     return Form(
       child: Column(
-        spacing: columSpacing,
+        spacing: columnSpacing,
         children: [
           AppProfileImage(
             imageUrl: dummyImageUrl,

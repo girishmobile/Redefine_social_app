@@ -16,7 +16,7 @@ class AddFriendByPhone extends StatelessWidget {
     final theme = Theme.of(context);
 
     return Scaffold(
-      appBar: const AppAppbar(
+      appBar: const MyAppBar(
         titleName: 'Add friend by Phone Number',
       ),
       body: SafeArea(
@@ -33,8 +33,8 @@ class AddFriendByPhone extends StatelessWidget {
                     style: theme.textTheme.headlineMedium,
                   ),
                   const AppTextWidget(
-                    top: columSpacing,
-                    bottom: columSpacing,
+                    top: columnSpacing,
+                    bottom: columnSpacing,
                     text:
                         'Please enter the name and phone number of the person you would like to add.',
                   ),
@@ -42,7 +42,7 @@ class AddFriendByPhone extends StatelessWidget {
                     hintText: 'Name',
                   ),
                   const SizedBox(
-                    height: columSpacing,
+                    height: columnSpacing,
                   ),
                   const AppTextFieldWidget(
                     hintText: 'Phone number',
@@ -56,7 +56,7 @@ class AddFriendByPhone extends StatelessWidget {
                 text: 'ADD',
                 width: screenWidth,
                 onPressed: () {},
-                bottom: columSpacing,
+                bottom: columnSpacing,
                 btnStyle: commonButtonStyle(context: context),
               ),
             )

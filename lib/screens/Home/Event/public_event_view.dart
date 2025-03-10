@@ -26,17 +26,17 @@ class _PublicEventViewState extends State<PublicEventView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppAppbar(
+        appBar: MyAppBar(
           titleName: 'Public Event',
         ),
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(containerPadding),
             child: Column(
-              spacing: columSpacing / 2,
+              spacing: columnSpacing / 2,
               children: [
                 Column(
-                  spacing: columSpacing / 2,
+                  spacing: columnSpacing / 2,
                   children: [
                     AppSearchBar(),
                     Container(
@@ -45,7 +45,7 @@ class _PublicEventViewState extends State<PublicEventView> {
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(
-                          spacing: columSpacing / 2,
+                          spacing: columnSpacing / 2,
                           children: [
                             AppEventButton(
                               text: 'Sort',

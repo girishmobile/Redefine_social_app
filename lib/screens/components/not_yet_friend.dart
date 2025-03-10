@@ -16,7 +16,7 @@ class NotYetFriend extends StatelessWidget {
     final colorScheme = theme.colorScheme;
     return Center(
       child: Column(
-        spacing: columSpacing,
+        spacing: columnSpacing,
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -34,7 +34,7 @@ class NotYetFriend extends StatelessWidget {
             style: textTheme.headlineMedium,
           ),
           const AppTextWidget(
-            text: notyetAnyfriends,
+            text: notyetanyfriends,
           ),
           AppButtonWidget(
             icon: Icon(

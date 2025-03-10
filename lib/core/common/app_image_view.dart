@@ -15,7 +15,7 @@ class AppImageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         width: width ?? 64,
         height: height ?? 64,
         child: imageUrl != null && imageUrl!.isNotEmpty

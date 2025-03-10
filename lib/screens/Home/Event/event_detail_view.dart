@@ -52,7 +52,7 @@ class _EventDetailViewState extends State<EventDetailView> {
               padding: EdgeInsets.all(16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                spacing: columSpacing / 2,
+                spacing: columnSpacing / 2,
                 children: [
                   AppTextWidget(
                     text: '[Event Name]',
@@ -79,7 +79,7 @@ class _EventDetailViewState extends State<EventDetailView> {
                   ),
                   AppTextWidget(
                     text:
-                        'Wolrd bigest contest cold play in Motera stdium, Ahmedabad, Gujrat',
+                        'World biggest contest cold play in Monera stadium, Ahmedabad, Gujarat',
                   ),
                   AppOutlineButton(
                     titleName: buttonText,
@@ -155,7 +155,7 @@ class _EventDetailViewState extends State<EventDetailView> {
         ),
         AppTextWidget(text: text)
       ],
-    );  
+    );
   }
 }
 /***

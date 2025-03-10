@@ -193,7 +193,7 @@ void showBottomsheetMenu(BuildContext context) {
             ),
             Column(
               children: [
-                AppIconButton(iconName: gogoleCalendar, onPressed: () {}),
+                AppIconButton(iconName: googleCalendar, onPressed: () {}),
                 AppTextWidget(
                   text: 'Google Calendar',
                   style: textTheme.bodySmall,

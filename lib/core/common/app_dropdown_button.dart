@@ -22,7 +22,7 @@ class AppDropdownButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return Container(
+    return SizedBox(
       width: width,
       child: DropdownButton2<String>(
           value: selectedValue,

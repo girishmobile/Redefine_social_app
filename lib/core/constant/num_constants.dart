@@ -21,4 +21,4 @@ const double zero9 = 0.9;
 
 const double containerPadding = 16;
 const double containerMargin = 20;
-const double columSpacing = 16;
+const double columnSpacing = 16;
