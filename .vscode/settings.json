@@ -3,5 +3,6 @@
         "applogo",
         "Loginscreen",
         "notyetanyfriends"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
