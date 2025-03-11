@@ -18,6 +18,11 @@ class _HomeScreenState extends State<HomeView> {
     'Friend #3',
     'Friend #4',
     'Friend #5',
+    'Friend #6',
+    'Friend #7',
+    'Friend #8',
+    'Friend #9',
+    'Friend #10',
   ];
   @override
   Widget build(BuildContext context) {

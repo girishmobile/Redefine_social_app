@@ -187,7 +187,7 @@ class _ForgotPasswordState extends State<ForgotPasswordView> {
   }
 
   Widget _buildIndicatorRow(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 2,
       child: Row(
         children: [

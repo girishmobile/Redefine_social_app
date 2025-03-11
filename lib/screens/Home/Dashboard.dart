@@ -41,8 +41,14 @@ class _DashboardState extends State<Dashboard> {
         iconTheme: IconThemeData(color: Theme.of(context).colorScheme.primary),
         centerTitle: true,
         title: isPortrait
-            ? loadAssetImage(name: applogo, width: size.width * zero4)
-            : loadAssetImage(name: applogo, width: size.width * zero2),
+            ? loadAssetImage(
+                name: applogo,
+                width: size.width * zero4,
+              )
+            : loadAssetImage(
+                name: applogo,
+                width: size.width * zero1,
+              ),
         leading: Center(
           child: AppProfileImage(
             height: 44,

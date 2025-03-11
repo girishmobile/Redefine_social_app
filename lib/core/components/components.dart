@@ -252,6 +252,9 @@ commonBoxDecoration1({
   );
 }
 
-commonDivider(){
-  return  Divider(height: 0,thickness: 0.3,);
+commonDivider() {
+  return Divider(
+    height: 0,
+    thickness: 0.3,
+  );
 }

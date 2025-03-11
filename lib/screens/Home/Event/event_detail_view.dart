@@ -153,7 +153,7 @@ class _EventDetailViewState extends State<EventDetailView> {
           icon,
           size: 24,
         ),
-        AppTextWidget(text: text)
+        Expanded(child: AppTextWidget(text: text))
       ],
     );
   }

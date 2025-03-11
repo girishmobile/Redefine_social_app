@@ -35,7 +35,14 @@ class AppScaffold extends StatelessWidget {
                 ? loadAssetImage(name: applogo, width: size.width * zero4)
                 : loadAssetImage(name: applogo, width: size.width * zero2),
           ),
-      body: Container(
+      body: body,
+      bottomNavigationBar: bottomNavigation,
+      floatingActionButton: floatingActionButton,
+    );
+  }
+}
+/**
+ * Container(
           decoration: BoxDecoration(
             gradient: RadialGradient(
               colors: [Color(0xFFFFF8E4), Color(0xFFFFFDF8)],
@@ -43,9 +50,5 @@ class AppScaffold extends StatelessWidget {
               radius: 1.0,
             ),
           ),
-          child: body),
-      bottomNavigationBar: bottomNavigation,
-      floatingActionButton: floatingActionButton,
-    );
-  }
-}
+          child:
+ */

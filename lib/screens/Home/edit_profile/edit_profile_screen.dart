@@ -58,14 +58,14 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   }
 
   void _pickImage(ImageSource source) async {
-    File? imageFile = await _imagePickerHelper.pickImage(source: source, context: context);
+    File? imageFile =
+        await _imagePickerHelper.pickImage(source: source, context: context);
     if (imageFile != null) {
       setState(() {
         _selectedImage = imageFile;
       });
     }
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -94,17 +94,16 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               children: [
                 _selectedImage != null
                     ? Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey[100],
-                      shape: BoxShape.circle,
-                      border: Border.all(color: Colors.grey, width: 1)),
-                      child: ClipRRect(
-                                        borderRadius: BorderRadius.circular(100),
-                        child: Image.file(_selectedImage!,
-
-                            height: 100, width: 100, fit: BoxFit.cover),
-                      ),
-                    )
+                        decoration: BoxDecoration(
+                            color: Colors.grey[100],
+                            shape: BoxShape.circle,
+                            border: Border.all(color: Colors.grey, width: 1)),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(100),
+                          child: Image.file(_selectedImage!,
+                              height: 100, width: 100, fit: BoxFit.cover),
+                        ),
+                      )
                     : AppProfileImage(
                         height: 100,
                         width: 100,
@@ -159,6 +158,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               ),
               AppTextFieldWidget(
                 controller: tetDOB,
+                readOnly: true,
                 suffixIcon: IconButton(
                     onPressed: () {
                       DatePickerHelper.selectDate(

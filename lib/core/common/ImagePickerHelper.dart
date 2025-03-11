@@ -7,7 +7,8 @@ import 'package:permission_handler/permission_handler.dart';
 class ImagePickerHelper {
   final ImagePicker _picker = ImagePicker();
 
-  Future<File?> pickImage({required ImageSource source, BuildContext? context}) async {
+  Future<File?> pickImage(
+      {required ImageSource source, BuildContext? context}) async {
     if (!(await _requestPermission(source))) {
       debugPrint("Permission denied");
       return null;
@@ -24,31 +25,12 @@ class ImagePickerHelper {
     }
   }
 
-/*  Future<bool> _checkPermissions(ImageSource source) async {
-    if (source == ImageSource.camera) {
-      var status = await Permission.camera.request();
-      return status.isGranted;
-    } else {
-      if (Platform.isAndroid) {
-        if (await Permission.photos.isDenied) {
-          await Permission.photos.request();
-        }
-        if (await Permission.storage.isDenied) {
-          await Permission.storage.request();
-        }
-        return await Permission.photos.isGranted || await Permission.storage.isGranted;
-      } else {
-        var status = await Permission.photos.request();
-        return status.isGranted;
-      }
-    }
-  }*/
   Future _requestPermission(ImageSource source) async {
     final cameraPermission = await Permission.camera.request();
     final storagePermission = await Permission.storage.request();
     final photosPermission = await Permission.photos.request();
     Permission permission =
-    source == ImageSource.camera ? Permission.camera : Permission.photos;
+        source == ImageSource.camera ? Permission.camera : Permission.photos;
 
     if (cameraPermission.isGranted) {
       return true;
@@ -63,11 +45,11 @@ class ImagePickerHelper {
       return await permission.request().isGranted;
     }
   }
+
   Future<File?> _cropImage(File imageFile, BuildContext? context) async {
     try {
       CroppedFile? croppedFile = await ImageCropper().cropImage(
         sourcePath: imageFile.path,
-
         uiSettings: [
           AndroidUiSettings(
             toolbarTitle: 'Crop Image',
@@ -88,7 +70,6 @@ class ImagePickerHelper {
               CropAspectRatioPreset.original,
               CropAspectRatioPreset.square,
               CropAspectRatioPreset.ratio4x3,
-
             ],
           ),
         ],
