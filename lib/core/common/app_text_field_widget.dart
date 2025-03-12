@@ -20,7 +20,7 @@ class AppTextFieldWidget extends StatelessWidget {
       this.fillColor,
       this.style,
       this.validator,
-        this.keyboardType,
+      this.keyboardType,
       this.onChanged,
       this.onTap,
       this.maxLine});
@@ -60,7 +60,6 @@ class AppTextFieldWidget extends StatelessWidget {
         readOnly: readOnly ?? false,
         maxLines: maxLine ?? 1,
         cursorColor: Colors.black,
-
         keyboardType: keyboardType,
         style: style ?? Theme.of(context).textTheme.bodyMedium,
         validator: validator,
@@ -72,7 +71,7 @@ class AppTextFieldWidget extends StatelessWidget {
           suffixIcon: suffixIcon,
           fillColor: fillColor,
           filled: true,
-          contentPadding: EdgeInsets.symmetric(horizontal: 12),
+          contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
           focusedBorder: commonBorderView(borderColor: Colors.black),
           enabledBorder: commonBorderView(),
           border: commonBorderView(),
@@ -84,3 +83,4 @@ class AppTextFieldWidget extends StatelessWidget {
 //Thi is the basic button widget of app you can use it in the all view and screen with common style
 //if you want to customize it plz send above parameter other wise it's take same default button
 //other wise it make support the method to customize the button
+//if you want to customize the button you can use the bellow parameter to customize the button

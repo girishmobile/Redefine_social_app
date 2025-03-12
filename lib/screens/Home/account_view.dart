@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:redefine_social_app/core/common/app_text_widget.dart';
 import 'package:redefine_social_app/core/components/components.dart';
+import 'package:redefine_social_app/core/constant/num_constants.dart';
 import 'package:redefine_social_app/core/router/route_name.dart';
 
 class AccountView extends StatelessWidget {
@@ -10,7 +11,7 @@ class AccountView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: ListView(
-        padding: EdgeInsets.all(0),
+        padding: EdgeInsets.symmetric(horizontal: columnSpacing, vertical: 10),
         children: [
           Padding(
             padding: const EdgeInsets.all(10.0),
@@ -55,23 +56,30 @@ class AccountView extends StatelessWidget {
               commonColView(title: "Groups", value: "5"),
             ],
           ),
-
           SizedBox(
             height: 20,
           ),
           commonDivider(),
-          commonListTile(onTap: (){
-
+          commonListTile(onTap: () {
             Navigator.pushNamed(context, RouteName.editProfile);
           }),
           commonDivider(),
-          commonListTile(title: "QR Code",icon: Icons.qr_code),
+          commonListTile(title: "QR Code", icon: Icons.qr_code),
           commonDivider(),
-          commonListTile(title: "Order and Payments",icon: Icons.credit_card_sharp),
+          commonListTile(
+              title: "Order and Payments", icon: Icons.credit_card_sharp),
           commonDivider(),
-          commonListTile(title: "Setting",icon: Icons.settings),
+          commonListTile(title: "Setting", icon: Icons.settings),
           commonDivider(),
-
+          commonListTile(
+            title: "Logout",
+            icon: Icons.logout,
+            onTap: () {
+              Navigator.pushNamedAndRemoveUntil(
+                  context, RouteName.loginScreen, (route) => false);
+            },
+          ),
+          commonDivider()
         ],
       ),
     );
@@ -97,17 +105,17 @@ class AccountView extends StatelessWidget {
     );
   }
 
-  commonListTile({String? title, IconData? icon, void Function()? onTap }) {
+  commonListTile({String? title, IconData? icon, void Function()? onTap}) {
     return ListTile(
       onTap: onTap,
-      contentPadding: EdgeInsets.only(left: 10,right: 10),
+      contentPadding: EdgeInsets.only(left: 10, right: 10),
       leading: Icon(
-        icon?? Icons.edit_outlined,
+        icon ?? Icons.edit_outlined,
         color: Colors.black,
         size: 30,
       ),
       title: AppTextWidget(
-        text:title?? "Edit Profile",
+        text: title ?? "Edit Profile",
         style: commonTextStyle(fontWeight: FontWeight.w600),
       ),
       trailing: Icon(

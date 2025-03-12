@@ -3,6 +3,7 @@ import 'package:redefine_social_app/core/colors/color.dart';
 import 'package:redefine_social_app/core/common/app_list_row.dart';
 import 'package:redefine_social_app/core/common/app_text_widget.dart';
 import 'package:redefine_social_app/core/components/components.dart';
+import 'package:redefine_social_app/core/router/route_name.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -75,6 +76,8 @@ class _HomeScreenState extends State<HomeView> {
               ),
               itemCount: friendList.length,
               itemBuilder: (context, index) => AppListRow(
+                onTap: () =>
+                    Navigator.pushNamed(context, RouteName.hostEventDetail),
                 text: friendList[index],
               ),
             ),

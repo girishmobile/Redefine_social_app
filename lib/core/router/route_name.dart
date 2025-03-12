@@ -18,4 +18,5 @@ class RouteName {
   static const String publicEvent = '/PublicEventView';
   static const String eventDetail = '/EventDetailView';
   static const String editProfile = '/edit_profile';
+  static const String hostEventDetail = '/HostEventDetail';
 }

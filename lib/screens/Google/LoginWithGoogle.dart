@@ -8,6 +8,7 @@ import 'package:redefine_social_app/core/common/app_text_widget.dart';
 import 'package:redefine_social_app/core/components/components.dart';
 import 'package:redefine_social_app/core/constant/num_constants.dart';
 import 'package:redefine_social_app/core/constant/string_utility.dart';
+import 'package:redefine_social_app/core/router/route_name.dart';
 
 class LoginWithGoogle extends StatefulWidget {
   const LoginWithGoogle({super.key});
@@ -79,7 +80,10 @@ class _LoginWithGoogleState extends State<LoginWithGoogle> {
             width: size.width,
             btnStyle: commonButtonStyle(context: context),
             textStyle: Theme.of(context).textTheme.labelMedium,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamedAndRemoveUntil(context, RouteName.dashboard,
+                  (Route<dynamic> route) => false);
+            },
           ),
         ],
       ),

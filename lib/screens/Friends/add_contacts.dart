@@ -12,7 +12,6 @@ class Contact {
 
 class AddContacts extends StatelessWidget {
   const AddContacts({super.key});
-
   @override
   Widget build(BuildContext context) {
     final List<Contact> contacts = [

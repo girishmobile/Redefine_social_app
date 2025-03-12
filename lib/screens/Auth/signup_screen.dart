@@ -7,6 +7,7 @@ import 'package:redefine_social_app/core/common/app_text_widget.dart';
 import 'package:redefine_social_app/core/components/components.dart';
 import 'package:redefine_social_app/core/constant/num_constants.dart';
 import 'package:redefine_social_app/core/constant/string_utility.dart';
+import 'package:redefine_social_app/core/router/route_name.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -73,7 +74,10 @@ class _SignupScreenState extends State<SignupScreen> {
           AppButtonWidget(
             top: 5,
             text: createAccount,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamedAndRemoveUntil(context, RouteName.dashboard,
+                  (Route<dynamic> route) => false);
+            },
             width: size.width,
             btnStyle: commonButtonStyle(context: context),
             textStyle: Theme.of(context).textTheme.labelMedium,

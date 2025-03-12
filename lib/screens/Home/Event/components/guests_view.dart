@@ -43,7 +43,7 @@ class GuestsView extends StatelessWidget {
           height: 12,
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             AppButtonWidget(
               onPressed: () {},
@@ -53,6 +53,9 @@ class GuestsView extends StatelessWidget {
                 borderRadius: 30,
                 backgroundColor: Colors.blue,
               ),
+            ),
+            SizedBox(
+              width: 16,
             ),
             AppButtonWidget(
               onPressed: () {},

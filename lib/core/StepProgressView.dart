@@ -12,7 +12,7 @@ class StepProgressView extends StatefulWidget {
   final Function(int) onStepTapped;
   const StepProgressView({
     super.key,
-   // required this.totalSteps,
+    // required this.totalSteps,
     required this.initialStep,
     required this.width,
     required this.activeColor,
@@ -44,7 +44,6 @@ class _StepProgressViewState extends State<StepProgressView> {
         children: <Widget>[
           Row(children: _iconViews()),
           const SizedBox(height: 8),
-
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: _titleViews(),
@@ -53,16 +52,24 @@ class _StepProgressViewState extends State<StepProgressView> {
       ),
     );
   }
+
   List<Widget> _titleViews() {
-    return widget.item.map((text) => AppTextWidget(text: text, style: commonTextStyle(color: widget.activeColor,fontWeight: FontWeight.w600))).toList();
+    return widget.item
+        .map((text) => AppTextWidget(
+            text: text,
+            style: commonTextStyle(
+                color: widget.activeColor, fontWeight: FontWeight.w600)))
+        .toList();
   }
+
   List<Widget> _iconViews() {
     var list = <Widget>[];
     for (int i = 0; i < widget.item.length; i++) {
       bool isCompleted = _curStep > i + 1;
       bool isSelected = _curStep == i + 1;
 
-      var circleColor = isCompleted || isSelected ? widget.activeColor : widget.inactiveColor;
+      var circleColor =
+          isCompleted || isSelected ? widget.activeColor : widget.inactiveColor;
       var textColor = isCompleted || isSelected ? Colors.white : Colors.black;
       var lineColor = Colors.grey;
 
@@ -86,19 +93,18 @@ class _StepProgressViewState extends State<StepProgressView> {
               child: isCompleted
                   ? const Icon(Icons.done, color: Colors.white, size: 20.0)
                   : AppTextWidget(
-              text:   '${i + 1}',
-                style: commonTextStyle(color: textColor, fontWeight: FontWeight.bold),
-              ),
+                      text: '${i + 1}',
+                      style: commonTextStyle(
+                          color: textColor, fontWeight: FontWeight.bold),
+                    ),
             ),
           ),
         ),
       );
-
       if (i != widget.item.length - 1) {
         list.add(Expanded(child: Container(height: 10.0, color: lineColor)));
       }
     }
     return list;
   }
-
 }

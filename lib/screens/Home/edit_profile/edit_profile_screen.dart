@@ -77,9 +77,14 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           style: commonTextStyle(fontSize: 16, fontWeight: FontWeight.w700),
         ),
         actions: [
-          AppTextWidget(
-            text: "Done",
-            style: commonTextStyle(fontWeight: FontWeight.w600),
+          InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: AppTextWidget(
+              text: "Done",
+              style: commonTextStyle(fontWeight: FontWeight.w600),
+            ),
           ),
           SizedBox(
             width: 20,

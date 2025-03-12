@@ -4,7 +4,7 @@ import 'package:redefine_social_app/screens/Auth/forgot_password_view.dart';
 import 'package:redefine_social_app/screens/Auth/login_view.dart';
 import 'package:redefine_social_app/screens/Auth/signup_screen.dart';
 import 'package:redefine_social_app/screens/Home/Event/create_event_view.dart';
-import 'package:redefine_social_app/screens/Facebook/LoginWithFacebook.dart';
+import 'package:redefine_social_app/screens/Facebook/login_with_fb.dart';
 import 'package:redefine_social_app/screens/Friends/add_contact_screen.dart';
 import 'package:redefine_social_app/screens/Friends/add_friend_by_phone.dart';
 import 'package:redefine_social_app/screens/Friends/add_friend_view.dart';
@@ -12,6 +12,7 @@ import 'package:redefine_social_app/screens/Friends/friend_list_view.dart';
 import 'package:redefine_social_app/screens/Google/LoginWithGoogle.dart';
 import 'package:redefine_social_app/screens/Home/Dashboard.dart';
 import 'package:redefine_social_app/screens/Home/Event/event_detail_view.dart';
+import 'package:redefine_social_app/screens/Home/Event/host_event_detail_view.dart';
 import 'package:redefine_social_app/screens/Home/edit_profile/edit_profile_screen.dart';
 import 'package:redefine_social_app/screens/Home/export_event_view.dart';
 import 'package:redefine_social_app/screens/Home/friends_activity_view.dart';
@@ -61,6 +62,8 @@ class RouteGenerated {
         return MaterialPageRoute(builder: (_) => const EventDetailView());
       case RouteName.editProfile:
         return MaterialPageRoute(builder: (_) => const EditProfileScreen());
+      case RouteName.hostEventDetail:
+        return MaterialPageRoute(builder: (_) => const HostEventDetailView());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(

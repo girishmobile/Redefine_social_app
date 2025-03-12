@@ -19,7 +19,7 @@ class DateTimeHelper {
   }
 
   //Get only time (default HH:mm:ss)
-  static String getFormatedTime(DateTime dateTime,
+  static String getFormattedTime(DateTime dateTime,
       {String format = 'HH:mm:ss'}) {
     return DateFormat(format).format(dateTime);
   }
